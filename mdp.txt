@@ -1,0 +1,38 @@
+Bonjour, 
+
+Nous avons modifié le mot de passe pour le compte APOLOGIC pour la LSWA : 5ReqL3i8
+
+Cela sera effectif après la mise à jour de ce soir. 
+
+Et également pour la base technique Développeurs interne : developpeur / 3igZuG66
+
+Cordialement, 
+
+
+
+!($P{libelle}.equals("Solde Global")) && !$P{isCompteCol}
+$F{numPiece}.isEmpty() ? "" : $F{soldeProgressif}
+$F{date}.isEmpty() ? "" : $F{soldeProgressif}
+$F{date}.toString().isEmpty() ? "" : ($F{soldeProgressif}.compareTo(BigDecimal.ZERO) == 0 ? "" : $F{soldeProgressif})
+
+
+!($P{libelle}.equals("Solde Global")) && !$P{isCompteCol}
+$F{montant}.compareTo(BigDecimal.ZERO) == 0 ? "" : $F{montant}
+
+A02803F037 
+a02803f037
+
+
+Sera commité dès livraison de la version en cours, sur la 1.30.0.x, la 1.30.1 et le tronc.
+
+
+            //FK - Le seul cas ou l'on ne vérifie pas le planning est le cas ou on est en PRESTATAIRE MONOCLIENT TOUT PLANNING DECOCHE
+            //Dans tous les autres cas on recherche les planning
+            if ((multiClient || Constante.SERVICE_CODE_TYPE_PORTAGE.equals(agservice.getService().getTypeservice().getTypeserviceCode())) && (lstPrestAFact == null || lstPrestAFact.isEmpty()) && (lstPrestCompleteAFact == null || lstPrestCompleteAFact.isEmpty())) {
+
+sql.append("SELECT DISTINCT c.id_client, c.cl_nom, c.cl_prenom, v.vi_nom, p.pla_numreference, mp.modepaiement_libelle, 'p', c.fk_foyer, fo.fk_client_principal ");
+
+
+, c.fk_foyer, fo.fk_client_principal
+sql.append("LEFT JOIN t_pr_foyer as fo ON id_foyer = c.fk_foyer ");
+                
