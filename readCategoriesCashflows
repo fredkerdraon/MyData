@@ -11,6 +11,7 @@ my $dbh = DBI->connect("dbi:mysql:dbname=managementoverview","root","fred1301",{
 
 my $Unit = 10;
 my $category = 'Toto';
+$category =  $ENV{'CATEGORY_CASHFLOWS'};
 ########################################################################################################
 
 # query to grab the max between debit and credit to set the scale of the graph
