@@ -150,6 +150,8 @@ alias findalias="find . -type f -name "*.php" -exec grep -il 'pattern' {} \;"
 alias garbage="jcmd 3894 GC.run"
 alias checksum="md5sum"
 alias route-apo="sudo ip route add 192.168.1.0/24 via 192.168.254.209 dev enp0s17"
+alias decrypt="openssl des3 -d < yourfile.txt.des3 > yourfile.txt.decrypted"
+alias encrypt="openssl des3 < youfile.txt > yourfile.txt.des3"
 
 #source .profile
 
