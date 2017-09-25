@@ -1,0 +1,8 @@
+git rm -f Test-Blender.blend
+git commit -m "Remove Blender"
+git push https://github.com/fredkerdraon/MyData
+You can also use "git push" that's it
+
+blender -b Camera5.blend -a
+blender -b Camera5.blend -f 250
+
