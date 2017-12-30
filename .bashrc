@@ -120,14 +120,16 @@ export PATH="~/Downloads/gradle-3.2.1/bin:$JAVA_HOME/bin:$PATH"
 export ANT_OPTS="-Xms16384m -Xmx20480m"
 export GRADLE_OPTS="-Xms16384m -Xmx20480m"
 export JAVA_OPTS="-Xms16384m -Xmx20480m"
+export RES="$HOME/researchwork/MyFirstWindow"
+export RES_HOME="$HOME/researchwork/"
 #alias netbeans='~/netbeans-8.1/bin/netbeans --jdkhome ~/Documents/Java/jdk1.7.0_79/ --laf javax.swing.plaf.metal.MetalLookAndFeel --fontsize 10 -J-Xms16384m -J-Xmx20480m'
 alias netbeans='~/netbeans-8.1/bin/netbeans --jdkhome ~/Documents/Java/jdk1.7.0_79/ --laf com.sun.java.swing.plaf.windows.WindowsLookAndFeel --fontsize 10 -J-Xms16384m -J-Xmx20480m'
-alias cdev='cd $HOME/Documents/Workspace'
-alias csprint='cd $HOME/Documents/Workspace/sprint'
-alias ctrunk='cd $HOME/Documents/Workspace/trunk'
-alias cpatch='cd $HOME/Documents/Workspace/patch'
-alias cbdd='cd ~/Documents/Workspace/sprint/bdd/scripts_lab4/01_v1'
-alias csprint='cd $HOME/Documents/Workspace/sprint/'
+alias cdev='cd $RES'
+alias cdat='cd $RES_HOME/MyData/'
+alias csprint='cd $RES_HOME/Lswa/sprint'
+alias ctrunk='cd $RES_HOME/Lswa/trunk'
+alias cpatch='cd $RES_HOME/Lswa/patch'
+alias cbdd='cd $RES_HOME/Lswa/trunk/bdd/scripts_lab4/01_v1'
 alias capache='cd $HOME/Document/Workspace/apache-tomcat-8.0.27/conf'
 alias cnet='cd $HOME/netbeans-8.1'
 alias netbeans-patch='~/netbeans-8.1/bin/netbeans --jdkhome ~/Documents/Java/jdk1.7.0_79/ --laf javax.swing.plaf.metal.MetalLookAndFeel --fontsize 10 -J-Xmx20480m -J-Xms16384m --userdir ~\.netbeans_patch'
@@ -137,15 +139,15 @@ alias gradle='gradle build.dev'
 alias gradleper='gradle build.dev -PforceCompilePersistance=true'
 alias cdown='cd /media/sf_Downloads'
 
-alias cres="cd ~/Documents/researchwork"
-alias clat="cd ~/Documents/researchwork/Latex"
-alias all="cd ~/Documents/researchwork/;./build-all"
-alias cdev="cd ~/Development/MyFirstWindow/"
-alias gitconf="git config --global user.email fredkerdraon@hotmail.com;git config --global user.name fredkerdraon"
-alias gitpull="cd ~/Documents/researchwork/MyFirstWindows/;git pull https://github.com/fredkerdraon/MyFirstWindows"
-alias gitclone="git clone https://github.com/fredkerdraon/MyFirstWindow"
-alias gitpush="git push https://github.com/fredkerdraon/MyFirstWindow"
-alias gitcommit="git remote commit -m "Modif2"  https://github.com/fredkerdraon/MyFirstWindow"
+alias cres="cd $RES"
+alias clat="cd $RES/Latex"
+alias all="cd $RES/;./build-all"
+alias cdev="cd $RES/MyFirstWindow/"
+#alias gitconf="git config --global user.email fredkerdraon@hotmail.com;git config --global user.name fredkerdraon"
+#alias gitpull="cd ~/Documents/researchwork/MyFirstWindows/;git pull https://github.com/fredkerdraon/MyFirstWindows"
+#alias gitclone="git clone https://github.com/fredkerdraon/MyFirstWindow"
+#alias gitpush="git push https://github.com/fredkerdraon/MyFirstWindow"
+#alias gitcommit="git remote commit -m "Modif2"  https://github.com/fredkerdraon/MyFirstWindow"
 alias findalias="find . -type f -name "*.php" -exec grep -il 'pattern' {} \;"
 alias garbage="jcmd 3894 GC.run"
 alias checksum="md5sum"
@@ -153,6 +155,7 @@ alias route-apo="sudo ip route add 192.168.1.0/24 via 192.168.254.209 dev enp0s1
 alias decrypt="openssl des3 -d < yourfile.txt.des3 > yourfile.txt.decrypted"
 alias encrypt="openssl des3 < youfile.txt > yourfile.txt.des3"
 alias blend="blender -b Camera5.blend -f 250"
+alias conv="convert -trim TimeTable.pdf -resize 500% -quality 100 -sharpen 0x1.0 TimeTable.jpg"
 
 #source .profile
 
