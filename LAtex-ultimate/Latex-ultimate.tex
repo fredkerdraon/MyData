@@ -1,0 +1,132 @@
+\documentclass[twocolumn]{article}
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{graphicx,dblfloatfix}% http://ctan.org/pkg/{graphicx,dblfloatfix}
+\usepackage{longtable}
+\usepackage{tikz}
+\begin{document}
+%%\lipsum[1-3]
+
+\makeatletter
+\newcommand\CTFont[1][small]{
+\renewenvironment{table}
+               {\@float{table}\csname#1\endcsname}
+               {\end@float}
+\renewenvironment{table*}
+               {\@dblfloat{table}\csname#1\endcsname}
+               {\end@dblfloat}
+}
+\makeatother
+
+\begin{figure*}[b]
+  \centering\includegraphics[width=\linewidth,height=0.6\textheight]{cal}
+  %\caption{B caption}
+\end{figure*}
+
+%{\footnotesize
+%Blalalallalalal
+%}
+
+%\begin{figure*}[b]
+%  \centering\includegraphics[width=\linewidth,height=0.3\textheight]{cal1}
+%  \caption{B caption}
+%\end{figure*}
+
+%\begin{figure*}[t]
+%  \centering\includegraphics[width=\linewidth,height=0.3\textheight]{burn}
+%  \caption{B caption}
+%\end{figure*}
+
+%\lipsum[4-7]
+
+\begin{figure}[t]
+  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{linear}
+  %\caption{A caption}
+\end{figure}
+
+%{\footnotesize
+%Blalalallalalal
+%}
+
+%Mon texte de base ici
+\begin{figure}[t]
+  \centering\includegraphics[width=\columnwidth,height=0.2\textheight]{cash}
+  %\caption{A caption}
+\end{figure}
+
+\begingroup
+%\CTFont% tables in \small size
+\CTFont[tiny]% tables in \tiny size
+\begin{figure}[t]
+{\footnotesize
+\input{/home/frederic/researchwork/MyFirstWindow/Latex/cashflows}
+}
+\end{figure}
+\endgroup
+
+\begin{figure}[t]
+{\footnotesize
+\input{/home/frederic/researchwork/MyFirstWindow/Latex/contacts}
+}
+\end{figure}
+
+\begin{figure}[t]
+  \centering\includegraphics[width=\columnwidth,height=0.3\textheight]{pnl}
+  %\caption{A caption}
+\end{figure}
+
+%\begin{figure}[t]
+%  \centering\includegraphics[width=\columnwidth,height=0.3\textheight]{contacts}
+  %\caption{A caption}
+%\end{figure}
+
+%\begin{figure}[t]
+%  \centering\includegraphics[width=\columnwidth,height=0.3\textheight]{tasks}
+  %\caption{A caption}
+%\end{figure}
+
+\begin{figure}[t]
+{\footnotesize
+\input{/home/frederic/researchwork/MyFirstWindow/Latex/tasks}
+}
+\end{figure}
+
+%\begin{figure}[t]
+%{\footnotesize
+%\input{/home/frederic/researchwork/MyFirstWindow/Latex/events}
+%}
+%\end{figure}
+
+%\begin{figure}[t]
+%{\footnotesize
+%\input{/home/frederic/researchwork/MyFirstWindow/Latex/chargesCheese}
+%}
+%\end{figure}
+
+%\begin{figure}[t]
+%  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{Brownian}
+%  \caption{A caption}
+%\end{figure}
+%Tentative 
+\begin{figure}[t]
+  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{burndown}
+  %\caption{A caption}
+%\input{BarPlot}
+\end{figure}
+
+%\begin{figure}[t]
+%  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{calendar}
+%  \caption{A caption}
+%\end{figure}
+
+%\begin{figure}[t]
+%  \centering\includegraphics[width=\columnwidth,height=0.8\textheight]{TimeTable}
+  %\caption{A caption}
+%\end{figure}
+
+%\begin{figure}[t]
+%  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{expenses}
+  %\caption{A caption}
+%\end{figure}
+
+%\lipsum[8-12]
+\end{document}
