@@ -1,0 +1,15 @@
+\documentclass[]{article}
+
+\usepackage{tikz}
+\usepackage{blindtext}
+
+\begin{document}
+\blindtext
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-15pt,xshift=15pt]%
+        at (current page.north west)
+        {\includegraphics[height=25mm]{Alexandra}};
+    \end{tikzpicture}
+
+\blindtext
+\end{document}

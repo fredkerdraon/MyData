@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{parallel,enumitem}
+\begin{document}
+\noindent
+Here we use \texttt{parallel} package.
+\par
+\begin{Parallel}[v]{0.48\textwidth}{0.48\textwidth}
+\ParallelLText{\noindent
+This is the left side.
+\begin{enumerate}[itemsep=1ex,leftmargin=1cm,rightmargin=.52\textwidth]
+  \item { First item}
+  \item{second item}
+\end{enumerate}
+And you are back in business.\\
+This list can break across pages automatically }
+\ParallelRText{\noindent
+This goes to the right. This may be going long. If you want you can input equations also.\\
+$x=y+10$\\
+This may be the best choice if you want this kind of thing to span multiple pages. }
+\ParallelPar
+\end{Parallel}
+\end{document}
