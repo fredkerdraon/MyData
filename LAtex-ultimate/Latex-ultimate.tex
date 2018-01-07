@@ -1,9 +1,13 @@
-\documentclass[twocolumn]{article}
+\documentclass[twocolumn,landscape,8pt]{article}
 \usepackage{lipsum}% http://ctan.org/pkg/lipsum
 \usepackage{graphicx,dblfloatfix}% http://ctan.org/pkg/{graphicx,dblfloatfix}
 \usepackage{longtable}
 \usepackage{tikz}
 \usepackage{blindtext}
+\usepackage{calendar} % Use the calendar.sty style
+
+\usepackage[landscape,margin=0.5in]{geometry}
+
 \begin{document}
 
 \title{Finance}
@@ -19,14 +23,14 @@
 }
 \makeatother
 
-\maketitle
+%\maketitle
 
 %\blindtext
-    \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=north west,yshift=-15pt,xshift=15pt]%
-        at (current page.north west)
-        {\includegraphics[height=15mm]{Logo}};
-    \end{tikzpicture}
+%    \begin{tikzpicture}[remember picture,overlay]
+%    \node[anchor=north west,yshift=-15pt,xshift=15pt]%
+%        at (current page.north west)
+%        {\includegraphics[height=15mm]{Logo}};
+%    \end{tikzpicture}
 %\blindtext
 
 %{\footnotesize
@@ -120,20 +124,43 @@
 %\input{BarPlot}
 \end{figure}
 
-\begin{figure*}[b]
-  \centering\includegraphics[width=\linewidth,height=0.6\textheight]{cal}
-  %\caption{B caption}
-\end{figure*}
+%\begin{figure*}[b]
+%  \centering\includegraphics[width=\linewidth,height=0.6\textheight]{cal}
+%  %\caption{B caption}
+%\end{figure*}
+
+%\begin{figure}[t]
+%{\footnotesize
+%\input{/home/frederic/researchwork/MyFirstWindow/Latex/calendar_3}
+%}
+%\end{figure}
+
 
 %\begin{figure}[t]
 %  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{calendar}
 %  \caption{A caption}
 %\end{figure}
 
-%\begin{figure}[t]
-%  \centering\includegraphics[width=\columnwidth,height=0.8\textheight]{TimeTable}
-  %\caption{A caption}
-%\end{figure}
+\begingroup
+	\onecolumn
+\begin{figure}[t]
+  \centering\includegraphics[width=\columnwidth,height=1.0\textheight]{TimeTable}
+  \caption{A caption}
+\end{figure}
+\endgroup
+
+%\onecolumn
+%\begingroup
+%\centering
+%{\LARGE The Title \\[1.5em]
+%\large First Author\Mark{1}, Second Author\Mark{2}, Third Author\Mark{1}, Fourth Author\Mark{2} and Fifth Author\Mark{3}}\\[1em]
+%\begin{tabular}{*{2}{>{\centering}p{.25\textwidth}}}
+%\Mark{1}Department1 & \Mark{2}Department2 \tabularnewline
+%School1 & School2  \tabularnewline
+%\url{email1} & \url{email2}
+%\end{tabular}\par
+%\twocolumn
+%\endgroup
 
 %\begin{figure}[t]
 %  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{expenses}
