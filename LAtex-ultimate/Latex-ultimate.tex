@@ -3,8 +3,10 @@
 \usepackage{graphicx,dblfloatfix}% http://ctan.org/pkg/{graphicx,dblfloatfix}
 \usepackage{longtable}
 \usepackage{tikz}
+\usepackage{blindtext}
 \begin{document}
-%%\lipsum[1-3]
+
+\title{Finance}
 
 \makeatletter
 \newcommand\CTFont[1][small]{
@@ -17,10 +19,15 @@
 }
 \makeatother
 
-\begin{figure*}[b]
-  \centering\includegraphics[width=\linewidth,height=0.6\textheight]{cal}
-  %\caption{B caption}
-\end{figure*}
+\maketitle
+
+%\blindtext
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-15pt,xshift=15pt]%
+        at (current page.north west)
+        {\includegraphics[height=15mm]{Logo}};
+    \end{tikzpicture}
+%\blindtext
 
 %{\footnotesize
 %Blalalallalalal
@@ -112,6 +119,11 @@
   %\caption{A caption}
 %\input{BarPlot}
 \end{figure}
+
+\begin{figure*}[b]
+  \centering\includegraphics[width=\linewidth,height=0.6\textheight]{cal}
+  %\caption{B caption}
+\end{figure*}
 
 %\begin{figure}[t]
 %  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{calendar}
