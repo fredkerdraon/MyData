@@ -5,13 +5,22 @@
 \usepackage{tikz}
 \usepackage{blindtext}
 \usepackage{calendar} % Use the calendar.sty style
+\usepackage[condensed,math]{anttor}
+\usepackage[T1]{fontenc}
 
 \usepackage[landscape,margin=0.5in]{geometry}
+\newcommand\framethispage[1][1cm]{%
+    \tikz[overlay,remember picture,line width=1pt]
+    \draw([xshift=(#1),yshift=(-#1)]current page.north west)rectangle
+         ([xshift=(-#1),yshift=(#1)]current page.south east);%
+}
 
 \begin{document}
+\framethispage[0.2cm]% le cadre est à 2 cm des bords de la feuille
 
 \title{Finance}
 
+Example de la police que je voulais
 \makeatletter
 \newcommand\CTFont[1][small]{
 \renewenvironment{table}
@@ -136,13 +145,14 @@
 %\end{figure}
 
 
-%\begin{figure}[t]
-%  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{calendar}
-%  \caption{A caption}
-%\end{figure}
+\begin{figure}[t]
+  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{/home/frederic/researchwork/MyFirstWindow/Latex/tasks}
+  \caption{A caption}
+\end{figure}
 
+% Ici on change pour ne mettre les éléments que sur une seule colonne, c'est à dire la page complète
 \begingroup
-	\onecolumn
+\onecolumn
 \begin{figure}[t]
   \centering\includegraphics[width=\columnwidth,height=1.0\textheight]{TimeTable}
   \caption{A caption}
