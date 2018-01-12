@@ -5,12 +5,31 @@
 \usepackage{tikz}
 \usepackage{blindtext}
 \usepackage{calendar} % Use the calendar.sty style
+\usepackage[condensed,math]{anttor}
+\usepackage[T1]{fontenc}
+\usepackage{pdfpages}
+
 
 \usepackage[landscape,margin=0.5in]{geometry}
+\newcommand\framethispage[1][1cm]{%
+    \tikz[overlay,remember picture,line width=1pt]
+    \draw([xshift=(#1),yshift=(-#1)]current page.north west)rectangle
+         ([xshift=(-#1),yshift=(#1)]current page.south east);%
+}
+
+\usepackage{catchfile}
+\newcommand{\getenv}[2][]{%
+  \CatchFileEdef{\temp}{"|kpsewhich --var-value #2"}{}%
+  \if\relax\detokenize{#1}\relax\temp\else\let#1\temp\fi}
 
 \begin{document}
+\framethispage[0.2cm]% le cadre est à 2 cm des bords de la feuille
+
+\getenv[\RES]{RES}\show\RES
 
 \title{Finance}
+
+%Example de la police que je voulais
 
 \makeatletter
 \newcommand\CTFont[1][small]{
@@ -23,7 +42,7 @@
 }
 \makeatother
 
-%\maketitle
+\maketitle
 
 %\blindtext
 %    \begin{tikzpicture}[remember picture,overlay]
@@ -34,7 +53,7 @@
 %\blindtext
 
 %{\footnotesize
-%Blalalallalalal
+%Blalalallalalal/home/frederickerdraon/Documents/researchwork/Latex/
 %}
 
 %\begin{figure*}[b]
@@ -69,14 +88,14 @@
 \CTFont[tiny]% tables in \tiny size
 \begin{figure}[t]
 {\footnotesize
-\input{/home/frederic/researchwork/MyFirstWindow/Latex/cashflows}
+\input{$RES/Latex/cashflows}
 }
 \end{figure}
 \endgroup
 
 \begin{figure}[t]
 {\footnotesize
-\input{/home/frederic/researchwork/MyFirstWindow/Latex/contacts}
+\input{/home/frederickerdraon/Documents/researchwork/Latex/contacts}
 }
 \end{figure}
 
@@ -97,7 +116,7 @@
 
 \begin{figure}[t]
 {\footnotesize
-\input{/home/frederic/researchwork/MyFirstWindow/Latex/tasks}
+\input{/home/frederickerdraon/Documents/researchwork/Latex/tasks}
 }
 \end{figure}
 
@@ -136,16 +155,31 @@
 %\end{figure}
 
 
-%\begin{figure}[t]
-%  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{calendar}
-%  \caption{A caption}
-%\end{figure}
+\begin{figure}[t]
+  \centering\includegraphics[width=\columnwidth,height=0.1\textheight]{/home/frederic/researchwork/MyFirstWindow/Latex/tasks}
+  \caption{A caption}
+\end{figure}
 
+\begin{figure}[t]
+{\footnotesize
+  \input{/home/frederickerdraon/Documents/researchwork/Latex/cashflows_other}
+}
+\end{figure}
+
+% Ici on change pour ne mettre les éléments que sur une seule colonne, c'est à dire la page complète
+% Ici on change pour ne mettre les éléments que sur une seule colonne, c'est à dire la page complète
 \begingroup
-	\onecolumn
+\onecolumn
 \begin{figure}[t]
   \centering\includegraphics[width=\columnwidth,height=1.0\textheight]{TimeTable}
   \caption{A caption}
+\end{figure}
+\endgroup
+
+\begingroup
+\onecolumn
+\begin{figure}[t]
+\includepdf[pages={1}]{/home/frederickerdraon/researchwork/Latex/Calendar17.pdf}
 \end{figure}
 \endgroup
 
