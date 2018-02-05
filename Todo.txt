@@ -5,4 +5,31 @@
 - Récupérer l'enceinte Boze
 - Récupérer les lettres au bureau du port
 - Récupérer mon mot de passe pour le CMB entreprise
-- 
+- https://www.ouestfrance-emploi.com/offre-d-emploi/analyste-performance-et-audit-h-f-4769718/
+
+eth6      Link encap:Ethernet  HWaddr 44:8a:5b:f2:b8:84  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:19 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:2762 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2762 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1827359 (1.8 MB)  TX bytes:1827359 (1.8 MB)
+
+wlan2     Link encap:Ethernet  HWaddr f4:06:69:0a:72:01  
+          inet addr:192.168.15.102  Bcast:192.168.15.255  Mask:255.255.255.0
+          inet6 addr: fe80::f606:69ff:fe0a:7201/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:6952 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7585 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:3393045 (3.3 MB)  TX bytes:5732696 (5.7 MB)
+
